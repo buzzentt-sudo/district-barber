@@ -233,14 +233,16 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
-            {[1, 2, 3, 4, 5, 6].map((item) => (
+            {[1, 2, 3, 4, 5].map((item) => (
               <div
                 key={item}
                 className="aspect-square overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04]"
               >
-                <div className="flex h-full items-center justify-center text-sm text-white/20">
-                  Foto {item}
-                </div>
+                <img
+                  src={`/gallery/foto${item}.jpeg`}
+                  alt={`Trabajo de District Barber ${item}`}
+                  className="h-full w-full object-cover"
+                />
               </div>
             ))}
           </div>
